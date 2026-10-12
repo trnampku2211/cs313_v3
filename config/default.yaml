@@ -1,0 +1,35 @@
+project:
+  name: Industrial Machine Anomaly Detection
+  random_state: 42
+
+data:
+  path: ai4i2020.csv
+  train_size: 0.60
+  validation_size: 0.20
+  test_size: 0.20
+
+features:
+  numerical:
+    - Air temperature [K]
+    - Process temperature [K]
+    - Rotational speed [rpm]
+    - Torque [Nm]
+    - Tool wear [min]
+  categorical:
+    - Type
+  target: Machine failure
+
+benchmark:
+  threshold_objective: validation_f1
+  dbscan_min_samples: [5, 10, 15, 20, 30]
+  dbscan_k_distance_quantiles: [0.85, 0.90, 0.93, 0.95, 0.97, 0.98, 0.99]
+  isolation_forest_estimators: [200, 300, 500]
+  isolation_forest_max_samples: [auto, 256, 512, 1024]
+  lof_neighbors: [10, 20, 35, 50, 100]
+  lof_metrics: [euclidean, manhattan]
+  random_forest_estimators: [200, 300, 500]
+  random_forest_depths: [null, 5, 10, 20]
+  random_forest_min_samples_split: [2, 5, 10]
+  random_forest_min_samples_leaf: [1, 2, 5]
+  random_forest_class_weight: [balanced, balanced_subsample]
+

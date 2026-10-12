@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest_tmp/
+.venv/
+.packages/
+.streamlit/
+artifacts/models/
+artifacts/preprocessors/
+artifacts/smoke/
+results/quick_smoke_results.json
+
