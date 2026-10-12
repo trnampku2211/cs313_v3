@@ -9,4 +9,5 @@ artifacts/models/
 artifacts/preprocessors/
 artifacts/smoke/
 results/quick_smoke_results.json
+/cs313_v3/
 
